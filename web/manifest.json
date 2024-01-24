@@ -7,7 +7,6 @@
         "declarativeContent",
         "storage"
       ],
-      "options_page": "tool/options.html",
       "background": {
         "scripts": [
           "tool/background.js"
