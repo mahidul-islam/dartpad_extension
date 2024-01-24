@@ -1,0 +1,38 @@
+{
+    "name": "Dartpad Extension",
+    "version": "1.0.0",
+    "description": "Dartpad Extension",
+    "permissions": [
+      "activeTab",
+      "declarativeContent",
+      "storage"
+    ],
+    "page_action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "16": "icons/get_started16.png",
+        "32": "icons/get_started32.png",
+        "48": "icons/get_started48.png",
+        "128": "icons/get_started128.png"
+      }
+    },
+    "icons": {
+      "16": "icons/get_started16.png",
+      "32": "icons/get_started32.png",
+      "48": "icons/get_started48.png",
+      "128": "icons/get_started128.png"
+    },
+    "content_security_policy": "script-src 'self' ; object-src 'self'",
+    "content_scripts": [
+      {
+        "matches": [
+          "https://dartpad.dartlang.org/*"
+        ],
+        "css": [
+          "empty.css"
+        ],
+        "run_at": "document_end"
+      }
+    ],
+    "manifest_version": 2
+  }
